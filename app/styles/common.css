@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+a {
+  color: #03A7F5;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul li {
+  list-style: none;
+  overflow: hidden;
+}
+
+input[type=password], input[type=text], textarea {
+  border: 1px solid #cdcdcd;
+  padding: 1px 7px;
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 30px;
+}
+
+h2 {
+  margin: 22px 0;
+  font-size: 22px;
+}
+
+h3 {
+  margin: 19px 0;
+  font-size: 19px;
+}
+
+table {
+  width: 80%;
+}
+
+table thead tr th {
+  background-color: #42DEAC;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+table tbody tr td {
+  border: 1px solid #000;
+  padding-left: 10px;
+}
+
+pre {
+  border: 1px solid #000;
+  color: #0004BD;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 80%;
+}
+
+form>ul>li {
+  padding-bottom: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.error-msg {
+  color: #AF0202;
+}
+
+input.error-field {
+  background-color: #f3e6ec;
+  border-color: #AF0202;
+}
+
+.selected-menu {
+  background-color: #F1F1F1;
+}

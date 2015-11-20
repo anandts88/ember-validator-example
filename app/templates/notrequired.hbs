@@ -1,0 +1,34 @@
+<h1>notrequired</h1>
+
+<h2>Rules</h2>
+<table border='0' cellpadding='0'>
+  <thead>
+    <tr>
+      <th>Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>notrequired</td>
+      <td>Validates property don’t have a value.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>How to use?</h2>
+<pre><code>
+  notrequired: { message: 'Value must be empty' }
+  notrequired: 'Value must be empty'
+  notrequired: true
+
+</code></pre>
+
+<h2>Example</h2>
+<form {{action 'submit' on='submit'}}>
+  <ul>
+    <li class='{{unless model.validationResult.userName.hasError 'hide'}} error-msg'>{{model.validationResult.userName.error}}</li>
+    <li>{{input type='text' value=model.userName classNameBindings='model.validationResult.userName.hasError:error-field'}}</li>
+    <li><button type='submit'>Submit</button></li>
+  </ul>
+</form>

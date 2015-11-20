@@ -1,0 +1,35 @@
+.content {
+  top: 40px;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+}
+
+.content .menu {
+  width: 20%;
+  min-height: 500px;
+  position: fixed;
+  top: 40px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  padding: 30px 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: left;
+  bottom: 20px;
+}
+
+.content .main {
+  float: right;
+  width: 78%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.menu ul.menus li {
+  padding: 3px 0;
+}
+
+.menu .menus .submenus {
+  margin-left: 15px;
+}

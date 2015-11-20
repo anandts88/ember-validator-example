@@ -1,0 +1,20 @@
+.footer {
+  position: fixed;
+  height: 20px;
+  background-color: #CCCBCB;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 400;
+}
+
+.footer div {
+  font-size: 11px;
+  top: 4px;
+  position: relative;
+  font-weight: bold;
+}
+
+.footer div a {
+  font-size: 11px;
+}

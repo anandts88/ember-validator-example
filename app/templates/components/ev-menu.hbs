@@ -1,0 +1,16 @@
+<ul class='menus'>
+  {{#each menus as |menu|}}
+    <li>
+      {{#if menu.submenus}}
+        {{menu.name}}
+        <ul class='submenus'>
+          {{#each menu.submenus as |submenu|}}
+            <li>{{#link-to submenu.name}}{{submenu.name}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      {{else}}
+        {{#link-to menu.route}}{{menu.name}}{{/link-to}}
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>

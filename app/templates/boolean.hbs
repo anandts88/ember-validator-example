@@ -1,0 +1,52 @@
+<h1>boolean</h1>
+
+<h2>Rules</h2>
+<table border='0' cellpadding='0'>
+  <thead>
+    <tr>
+      <th>Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>boolean</td>
+      <td>Validates property is of type boolean.</td>
+    </tr>
+    <tr>
+      <td>required</td>
+      <td>Validates property has a value 'true'.</td>
+    </tr>
+    <tr>
+      <td>notrequired</td>
+      <td>Validates property has a value 'false'.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>How to use?</h2>
+<pre><code>
+  boolean: true
+  boolean: {
+    required: true
+    message: 'must be true'
+  }
+
+  boolean: {
+    notrequired: true
+    messages: {
+      boolean: 'must be boolean'
+      notrequired: 'must be false'
+    }
+  }
+
+</code></pre>
+
+<h2>Example</h2>
+<form {{action 'submit' on='submit'}}>
+  <ul>
+    <li class='{{unless model.validationResult.isAccept.hasError 'hide'}} error-msg'>{{model.validationResult.isAccept.error}}</li>
+    <li>{{input type='checkbox' checked=model.isAccept classNameBindings='model.validationResult.isAccept.hasError:error-field'}} Check to Accept.</li>
+    <li><button type='submit'>Submit</button></li>
+  </ul>
+</form>

@@ -22,6 +22,8 @@ AppRouter.map(function() {
   this.route('zip');
   this.route('ssn');
   this.route('file');
+  this.route('phone');
+  this.route('custom');
 });
 
 export default AppRouter;

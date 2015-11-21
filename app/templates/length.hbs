@@ -3,3 +3,34 @@
 {{ev-rules validator=model.validator}}
 
 <h2>How to use?</h2>
+<pre><code>
+  length: {
+    minimum: 4,
+    maximum: 20,
+    messages: {
+      minimum: 'Must be more than 4 characters',
+      maximum: 'Must be less than 20 characters'
+    }
+  }
+
+  length: {
+    is: 4,
+    messages: {
+      is: 'Must be contains 4 characters'
+    }
+  }
+
+  length: {
+    is: 4,
+    message: 'Must be contains 4 characters'
+  }
+
+  length: {
+    is: 4,
+    message: 'Must be contains 4 characters'
+    tokenizer: function(value) {
+      return value.split(' ');
+    }
+  }
+
+</code></pre>

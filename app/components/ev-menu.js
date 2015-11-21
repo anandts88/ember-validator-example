@@ -13,16 +13,18 @@ export default Component.extend({
         { name: 'required' },
         { name: 'notrequired' },
         { name: 'boolean' },
+        { name: 'equals' },
         { name: 'contains' },
+        { name: 'length' },
         { name: 'date' },
         { name: 'numeric' },
-        { name: 'length' },
         { name: 'pattern' },
-        { name: 'equals' },
         { name: 'email' },
+        { name: 'phone' },
         { name: 'zip' },
         { name: 'ssn' },
-        { name: 'file' }
+        { name: 'file' },
+        { name: 'custom' }
       ])
     }
   ])

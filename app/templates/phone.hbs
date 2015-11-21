@@ -1,0 +1,23 @@
+<h1>date</h1>
+
+{{ev-rules validator=model.validator}}
+
+<h2>How to use?</h2>
+<pre><code>
+  phone: {
+    format1: true,
+    format5: true,
+    message: "Invalid phone"
+  }
+  // This matches format1 and format4 patterns of phone number
+
+  phone: {
+    all: true
+    message: "Invalid phone"
+  }
+
+  phone: true
+  phone: 'Invalid phone'
+</code></pre>
+
+<h2>Example</h2>

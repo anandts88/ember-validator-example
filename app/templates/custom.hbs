@@ -1,0 +1,17 @@
+<h1>custom</h1>
+
+{{ev-rules validator=model.validator}}
+
+<h2>How to use?</h2>
+<pre><code>
+  import { inlineValidator } from 'ember-validator';
+
+  {
+    userName: {
+      custom: inlineValidator(function(model, property) {
+        return 'Error message';
+      })
+    }
+  }
+  
+</code></pre>

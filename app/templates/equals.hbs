@@ -3,3 +3,24 @@
 {{ev-rules validator=model.validator}}
 
 <h2>How to use?</h2>
+<pre><code>
+  equals: {
+    message: 'Only myusername is accepted',
+    accept: 'myusername'
+  }
+
+  equals: {
+    message: 'Only myusername is not allowed',
+    reject: 'myusername'
+  }
+
+  equals: {
+    accept: 'correctusername',
+    reject: 'wrongusername',
+    messages: {
+      accept: 'Only correctusername is accepted',
+      reject: 'wrongusername is not accepted',
+    }
+  }
+
+</code></pre>

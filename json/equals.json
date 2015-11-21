@@ -1,0 +1,34 @@
+{
+  "rules": [
+    {
+      "rule":"accept",
+      "description":"Validates property is equal to supplied target value"
+    },
+    {
+      "rule":"reject",
+      "description":"Validates property is not equal to supplied target value"
+    }
+  ],
+
+  "options": [
+     {
+       "name":"message",
+       "description":"Error message to be displayed when validation fails."
+     },
+     {
+       "name":"messages",
+       "description":"Object holding error message for each rule."
+     }
+   ],
+
+   "messages": [
+      {
+        "rule":"accept",
+        "description":"Error message returned when accept validation fails."
+      },
+      {
+        "rule":"reject",
+        "description":"Error message returned when reject validation fails."
+      }
+    ]
+}

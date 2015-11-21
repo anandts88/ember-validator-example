@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
-const {
-  Component,
-  observer,
-  isEmpty
-} = Ember;
+const { Component } = Ember;
 
 export default Component.extend({
   tagName: 'nav',

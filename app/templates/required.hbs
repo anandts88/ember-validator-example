@@ -1,20 +1,6 @@
 <h1>required</h1>
 
-<h2>Rules</h2>
-<table border='0' cellpadding='0'>
-  <thead>
-    <tr>
-      <th>Rule</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>required</td>
-      <td>Validates property has a value.</td>
-    </tr>
-  </tbody>
-</table>
+{{ev-rules validator=model.validator}}
 
 <h2>How to use?</h2>
 <pre><code>
@@ -25,7 +11,7 @@
 </code></pre>
 
 <h2>Example</h2>
-<form {{action 'submit' on='submit'}}>
+<form {{action 'submit' on='submit'}} class='example'>
   <ul>
     <li class='{{unless model.validationResult.userName.hasError 'hide'}} error-msg'>{{model.validationResult.userName.error}}</li>
     <li>{{input type='text' value=model.userName classNameBindings='model.validationResult.userName.hasError:error-field'}}</li>

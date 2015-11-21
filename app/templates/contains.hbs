@@ -1,0 +1,54 @@
+<h1>contains</h1>
+
+{{ev-rules validator=model.validator}}
+
+<h2>How to use?</h2>
+<pre><code>
+  contains: {
+    exclude: ['A', 'B', 'C'],
+    messages: {
+      exclude: 'Please enter valid value'
+    }
+  }
+
+  contains: {
+    exclude: ['A', 'B', 'C'],
+    message: 'Please enter valid value'
+  }
+
+  contains: {
+    excludeRange: [1, 10],
+    messages: {
+      excludeRange: 'cannot be between 1 and 10'
+    }
+  }
+
+  contains: {
+    include: ['A', 'B', 'C'],
+    messages: {
+      include: 'Please enter valid value'
+    }
+  }
+
+  contains: {
+    include: ['A', 'B', 'C'],
+    message: 'Please enter valid value'
+  }
+
+  contains: {
+    includeRange: [1, 10],
+    messages: {
+      includeRange: 'cannot be between 1 and 10'
+    }
+  }
+
+</code></pre>
+
+<h2>Example</h2>
+<form {{action 'submit' on='submit'}}>
+  <ul>
+    <li class='{{unless model.validationResult.isAccept.hasError 'hide'}} error-msg'>{{model.validationResult.isAccept.error}}</li>
+    <li>{{input type='checkbox' checked=model.isAccept classNameBindings='model.validationResult.isAccept.hasError:error-field'}} Check to Accept.</li>
+    <li><button type='submit'>Submit</button></li>
+  </ul>
+</form>

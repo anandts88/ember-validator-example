@@ -1,20 +1,29 @@
-<h1>boolean</h1>
+<h1>date</h1>
 
 {{ev-rules validator=model.validator}}
 
 <h2>How to use?</h2>
 <pre><code>
-  boolean: true
-  boolean: {
-    required: true
-    message: 'must be true'
+  date: {
+    weekend: true,
+    messages: {
+      weekend: 'must not be weekend'
+    }
   }
 
-  boolean: {
-    notrequired: true
+  // If property date is 'Nov/01/2015'
+  date: {
+    format: 'MMM/DD/YYYY',
+    before: {
+      target: 'Oct/31/2015',
+      format: 'MMM/DD/YYYY'
+    },
+    afterSame: {
+      target: new Date()
+    },
     messages: {
-      boolean: 'must be boolean'
-      notrequired: 'must be false'
+      before: 'date must be before Oct/31/2015',
+      afterSame: 'date must be after new Date()'
     }
   }
 

@@ -9,12 +9,8 @@
 }
 
 .footer div {
-  font-size: 11px;
+  font-size: 0.8em;
   top: 4px;
   position: relative;
   font-weight: bold;
-}
-
-.footer div a {
-  font-size: 11px;
 }

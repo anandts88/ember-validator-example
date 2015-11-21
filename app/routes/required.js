@@ -1,12 +1,18 @@
 import Ember from 'ember';
 import EmberValidator from 'ember-validator';
 
-const { Route } = Ember;
+const { Route, RSVP } = Ember;
+const { Promise } = RSVP;
 
 export default Route.extend(EmberValidator, {
   model() {
-    return Ember.Object.create({
-      userName: null
+    return new Promise((resolve) => {
+      $.getJSON('./json/required.json', (response) => {
+        resolve(Ember.Object.create({
+          validator: response,
+          userName: null
+        }));
+      });
     });
   },
 

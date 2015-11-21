@@ -21,7 +21,7 @@
 </code></pre>
 
 <h2>Example</h2>
-<form {{action 'submit' on='submit'}}>
+<form {{action 'submit' on='submit'}} class='example'>
   <ul>
     <li class='{{unless model.validationResult.isAccept.hasError 'hide'}} error-msg'>{{model.validationResult.isAccept.error}}</li>
     <li>{{input type='checkbox' checked=model.isAccept classNameBindings='model.validationResult.isAccept.hasError:error-field'}} Check to Accept.</li>

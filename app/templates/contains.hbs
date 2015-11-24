@@ -45,10 +45,14 @@
 </code></pre>
 
 <h2>Example</h2>
-<form {{action 'submit' on='submit'}}>
+<form {{action 'submit' on='submit'}} autocomplete="off">
   <ul>
-    <li class='{{unless model.validationResult.isAccept.hasError 'hide'}} error-msg'>{{model.validationResult.isAccept.error}}</li>
-    <li>{{input type='checkbox' checked=model.isAccept classNameBindings='model.validationResult.isAccept.hasError:error-field'}} Check to Accept.</li>
+    <li>Include only 'A', 'B', 'C', 'D'</li>
+    <li class='{{unless model.validationResult.field1.hasError 'hide'}} error-msg'>{{model.validationResult.field1.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field1.hasError:error-field' maxlength=1 value=model.field1}}</li>
+    <li>Exclude anything within 4 to 9</li>
+    <li class='{{unless model.validationResult.field2.hasError 'hide'}} error-msg'>{{model.validationResult.field2.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field2.hasError:error-field' maxlength=1 value=model.field2}}</li>
     <li><button type='submit'>Submit</button></li>
   </ul>
 </form>

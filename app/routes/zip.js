@@ -13,5 +13,24 @@ export default Route.extend(EmberValidator, {
         }));
       });
     });
+  },
+
+  actions: {
+    submit() {
+      const model = this.get('controller.model');
+      const validations = {
+        field: {
+          required: 'Please enter value.',
+          zip: 'Please enter valid zip code (NNNNN or NNNNN-NNNN).'
+        }
+      };
+
+      model.set('validationResult', null);
+      this.validateMap({ model, validations }).then(() => {
+        alert('Valid');
+      }).catch((validationResult) => {
+        model.set('validationResult', validationResult);
+      });
+    }
   }
 });

@@ -18,3 +18,12 @@
   ssn: 'Invalid ssn'
 
 </code></pre>
+<h2>Example</h2>
+<form {{action 'submit' on='submit'}} class='example' autocomplete="off">
+  <ul>
+    <li>Enter ssn: (NNN-NN-NNNN or NNNNNNNNN)</li>
+    <li class='{{unless model.validationResult.field.hasError 'hide'}} error-msg'>{{model.validationResult.field.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field.hasError:error-field' value=model.field}}</li>
+    <li><button type='submit'>Submit</button></li>
+  </ul>
+</form>

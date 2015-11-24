@@ -13,5 +13,28 @@ export default Route.extend(EmberValidator, {
         }));
       });
     });
+  },
+
+  actions: {
+    submit() {
+      const model = this.get('controller.model');
+      const validations = {
+        field: {
+          required: 'Please enter value.',
+          ssn: {
+            format1: true,
+            format2: true,
+            message: 'Please enter valid ssn (NNN-NN-NNNN or NNNNNNNNN).'
+          }
+        }
+      };
+
+      model.set('validationResult', null);
+      this.validateMap({ model, validations }).then(() => {
+        alert('Valid');
+      }).catch((validationResult) => {
+        model.set('validationResult', validationResult);
+      });
+    }
   }
 });

@@ -34,3 +34,14 @@
   }
 
 </code></pre>
+
+<h2>Example</h2>
+<form {{action 'submit' on='submit'}} class='example' autocomplete="off">
+  <ul>
+    <li>Field (must have minimum of 4 and maximum of 10 characters length):</li>
+    <li class='{{unless model.validationResult.field1.hasError 'hide'}} error-msg'>{{model.validationResult.field1.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field1.hasError:error-field' value=model.field1}}</li>
+
+    <li><button type='submit'>Submit</button></li>
+  </ul>
+</form>

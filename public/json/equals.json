@@ -12,6 +12,10 @@
 
   "options": [
      {
+        "name":"ignoreCase",
+        "description":"Set to true if you want to do ignore case while comparison. Make sure property value is string."
+     },
+     {
        "name":"message",
        "description":"Error message to be displayed when validation fails."
      },

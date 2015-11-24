@@ -11,7 +11,7 @@
 </code></pre>
 
 <h2>Example</h2>
-<form {{action 'submit' on='submit'}} class="example">
+<form {{action 'submit' on='submit'}} class="example" autocomplete="off">
   <ul>
     <li class='{{unless model.validationResult.userName.hasError 'hide'}} error-msg'>{{model.validationResult.userName.error}}</li>
     <li>{{input type='text' value=model.userName classNameBindings='model.validationResult.userName.hasError:error-field'}}</li>

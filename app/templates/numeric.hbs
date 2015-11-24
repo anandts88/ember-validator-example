@@ -40,3 +40,26 @@
    }
 
 </code></pre>
+
+<h2>Example</h2>
+<form {{action 'submit' on='submit'}} class='example' autocomplete="off">
+  <ul>
+    <li>Field1 (must be a number):</li>
+    <li class='{{unless model.validationResult.field1.hasError 'hide'}} error-msg'>{{model.validationResult.field1.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field1.hasError:error-field' value=model.field1}}</li>
+
+    <li>Field2 (must be an integer):</li>
+    <li class='{{unless model.validationResult.field2.hasError 'hide'}} error-msg'>{{model.validationResult.field2.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field2.hasError:error-field' value=model.field2}}</li>
+
+    <li>Field3 (must be an greater than 4 and less than or equal to 100):</li>
+    <li class='{{unless model.validationResult.field3.hasError 'hide'}} error-msg'>{{model.validationResult.field3.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field3.hasError:error-field' value=model.field3}}</li>
+
+    <li>Field4 (must be between 10 and 20):</li>
+    <li class='{{unless model.validationResult.field4.hasError 'hide'}} error-msg'>{{model.validationResult.field4.error}}</li>
+    <li>{{input type='text' classNameBindings='model.validationResult.field4.hasError:error-field' value=model.field4}}</li>
+
+    <li><button type='submit'>Submit</button></li>
+  </ul>
+</form>

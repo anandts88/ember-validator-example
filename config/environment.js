@@ -1,11 +1,24 @@
 /* jshint node: true */
 
+var contentSecurityPolicy = {
+  'default-src': "'none'",
+  'object-src':  "'self'",
+  'script-src':  "'self' 'unsafe-inline' 'unsafe-eval'",
+  'font-src':    "'self'",
+  'connect-src': "'self'",
+  'img-src':     "'self'",
+  'style-src':   "'self' 'unsafe-inline'",
+  'frame-src':   "'self'"
+};
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-validator-example',
+    pageLoader: '#splash-page',
     environment: environment,
     baseURL: '/',
     locationType: 'hash',
+    contentSecurityPolicy: contentSecurityPolicy,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -16,6 +29,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      desktopAppNamespace: 'ember-validator-example-common'
     }
   };
 

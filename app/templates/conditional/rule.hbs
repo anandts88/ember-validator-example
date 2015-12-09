@@ -1,0 +1,48 @@
+{{ev-title title='Conditional Validator for rule.'}}
+<p>Conditinally allow or disallow individual validation rules, by supplying condition for individual validation rule.
+If the supplied condition pass the rule will we processed or else skips that particular rule unlike
+`Conditional Validator by property` which skips validation for entire property. If the condition is defined for
+the validator all the rules inside the validator will be verified, if the condition is defined only for one particular rule
+then that particular rule is verifed before processing but rest of the rules will be processed without any verification.</p>
+
+<h2>Types</h2>
+<ul>
+  <li>
+    <span class='argument'>if</span>
+    <p class='description'>Validates the property if the value returned is `true`.</p>
+  </li>
+  <li>
+    <span class='argument'>unless</span>
+    <p class='description'>Validates the property if the value returned is `false`.</p>
+  </li>
+</ul>
+
+<h2>How to use?</h2>
+<pre><code>
+  description: {
+    length: {
+      minimum: 4,
+      maximum: 20,
+    },
+
+    pattern: {
+      if(model, property) {
+        const value = model.get(property);
+        return value.length &gt;= 4 &amp;&amp; value.length &lt;= 20;
+      },
+      with: /^[a-zA-Z]*$/,
+      message: 'Must contain only alphabet'
+    }
+  }
+
+</code></pre>
+
+<h2>Example</h2>
+<form {{action 'submit' on='submit'}} class='example' autocomplete="off">
+  <ul>
+    <li>Description Field: (optional)</li>
+    <li class='{{unless model.validationResult.description.hasError 'hide'}} error-msg'>{{model.validationResult.description.error}}</li>
+    <li>{{input type='text' value=model.description classNameBindings='model.validationResult.description.hasError:error-field'}}</li>
+    <li><button type='submit'>Submit</button></li>
+  </ul>
+</form>

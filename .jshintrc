@@ -4,7 +4,9 @@
     "window",
     "-Promise",
     "$",
-    "_"
+    "_",
+    "__device",
+    "moment"
   ],
   "browser": true,
   "boss": true,

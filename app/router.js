@@ -8,22 +8,46 @@ const AppRouter = Router.extend({
 });
 
 AppRouter.map(function() {
-  this.route('overview', {path: '/'});
-  this.route('required');
-  this.route('notrequired');
-  this.route('boolean');
-  this.route('contains');
-  this.route('date');
-  this.route('numeric');
-  this.route('length');
-  this.route('pattern');
-  this.route('equals');
-  this.route('email');
-  this.route('zip');
-  this.route('ssn');
-  this.route('file');
-  this.route('phone');
-  this.route('custom');
+  this.route('overview', { path: '/' });
+  this.route('howtouse');
+
+  // Start Methods
+  this.resource('methods', function() {
+    this.route('validate-map');
+    this.route('create-object-with-validator');
+    this.route('computed-validate-map');
+    this.route('validate');
+  });
+  // End Methods
+
+  // Start validators
+  this.resource('validators', function() {
+    this.route('required');
+    this.route('notrequired');
+    this.route('boolean');
+    this.route('contains');
+    this.route('date');
+    this.route('numeric');
+    this.route('length');
+    this.route('pattern');
+    this.route('equals');
+    this.route('email');
+    this.route('zip');
+    this.route('ssn');
+    this.route('file');
+    this.route('phone');
+    this.route('custom');
+  });
+  // End validators
+
+  // Start Conditional validator
+  this.resource('conditional', function() {
+    this.route('property');
+    this.route('rule');
+  });
+  // End Conditional validator
+
+  this.route('missing', { path: '/*path' });
 });
 
 export default AppRouter;

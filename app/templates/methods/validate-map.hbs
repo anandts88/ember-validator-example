@@ -1,0 +1,87 @@
+{{ev-title title='validateMap'}}
+<p>This functions is used to validate ember object and provide validation result.</p>
+
+<h2>Arguments</h2>
+<p>Takes plain javascript object as argument and the object has below property.</p>
+<ul>
+  <li>
+    <span class='argument'>model (mandatory)</span>
+    <p class='description'>Model which needs to be validated.</p>
+  </li>
+  <li>
+    <span class='argument'>validations  (mandatory)</span>
+    <p class='description'>Validation rules</p>
+  </li>
+  <li>
+    <span class='argument'>noPromise (optional)</span>
+    <p class='description'>By default promise is returned, if you don't want promise and want results directly then set this to `true`.</p>
+  </li>
+</ul>
+
+<h2>Sample</h2>
+<pre><code>
+  import Ember from 'ember';
+  import EmberValidator from 'ember-validator';
+
+  export default Ember.Controller.extend(EmberValidations, {
+
+    actions: {
+      var obj = Ember.Object.create({
+        userName: null,
+        password: null
+      });
+
+      var rules = {
+        userName: {
+          required: {
+            message: "Please enter user name"
+          }
+        },
+
+        password: {
+          required: {
+            message: "Please enter password"
+          }
+        }
+      };
+
+      var promise = this.validateMap({
+        // Pass the object you want to validate
+        model: obj,
+        // Define validation rules in the form of JSON,
+        validations: rules
+      });
+
+      promise.then(function() {
+        // When no errors or object is valid.
+      }).catch(function(result) {
+        // When there are errors or object is in valid.
+        // result.get('errors')
+        //   -> Returns all error messages
+        // result.get('errors')
+        //   -> Returns first message
+        // result.get('isValid')
+        //   -> Returns true if the object is valid
+        // result.get('isInvalid')
+        //   -> Returns true if the object is invalid
+        // result.get('hasError')
+        //   -> Returns true if the object has errors
+
+        // result.get('userName.errors')
+        //   -> Returns all error messages related with userName property
+        // result.get('userName.errors')
+        //   -> Returns first message related with userName property
+        // result.get('userName.isValid')
+        //   -> Returns true if userName property is valid
+        // result.get('userName.isInvalid')
+        //   -> Returns true if userName property is invalid
+        // result.get('userName.hasError')
+        //   -> Returns true if userName property has errors
+      }).finally(function() {
+        // Regardless object is valid or invalid.
+      });
+    }
+
+  });
+
+</code></pre>

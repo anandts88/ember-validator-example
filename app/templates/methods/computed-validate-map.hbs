@@ -27,7 +27,7 @@
     <p class='description'>Returns all error messages related with userName property</p>
   </li>
   <li>
-    <span class='argument'>model.get('userNameValidatorResult.errors')</span>
+    <span class='argument'>model.get('userNameValidatorResult.error')</span>
     <p class='description'>Returns first message related with userName property</p>
   </li>
   <li>
@@ -41,6 +41,22 @@
   <li>
     <span class='argument'>model.get('userNameValidatorResult.hasError')</span>
     <p class='description'>Returns true if userName property has errors</p>
+  </li>
+  <li>
+    <span class='argument'>model.get('validatorResultHasError')</span>
+    <p class='description'>Returns `true` if the model has any validation error.</p>
+  </li>
+  <li>
+    <span class='argument'>model.get('validatorResultIsInValid')</span>
+    <p class='description'>Returns `true` if the model is not valid.</p>
+  </li>
+  <li>
+    <span class='argument'>model.get('validatorResultIsValid')</span>
+    <p class='description'>Returns `true` if the model is valid.</p>
+  </li>
+  <li>
+    <span class='argument'>model.get('validatorResultErrors')</span>
+    <p class='description'>Returns arry of all validation error messages in the model.</p>
   </li>
 </ul>
 

@@ -1,0 +1,83 @@
+{
+  "assets": {
+    "app-boot.js": "app-boot-b1e01bf19967a647ba02fd7dc746a4e3.js",
+    "device.js": "device-3fe25bca01adbc6f7e37751c0cddf198.js",
+    "ember-validator-example-mobile.css": "ember-validator-example-mobile-52d8f2bd0aa0f183e04980bbe9f20097.css",
+    "ember-validator-example-mobile.js": "ember-validator-example-mobile-bf38822fd1dcb98ecd9b7e4677828050.js",
+    "ember-validator-example.css": "ember-validator-example-c71addd675b27d265604ba9a964ef264.css",
+    "ember-validator-example.js": "ember-validator-example-ff83aad2d9bc1e276c9e140e240ad681.js",
+    "vendor-mobile.css": "vendor-mobile-09c33e0dbe10929e85882e8bef2360e0.css",
+    "vendor-mobile.js": "vendor-mobile-1b047a542ae43903d6e6402d0dada1b6.js",
+    "vendor.css": "vendor-09c33e0dbe10929e85882e8bef2360e0.css",
+    "vendor.js": "vendor-1b047a542ae43903d6e6402d0dada1b6.js",
+    "viewport-optimizations.js": "viewport-optimizations-ac257bcb47388dfb7311da31a3934b64.js"
+  },
+  "files": {
+    "app-boot-b1e01bf19967a647ba02fd7dc746a4e3.js": {
+      "digest": "b1e01bf19967a647ba02fd7dc746a4e3",
+      "logical_path": "app-boot.js",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 1389
+    },
+    "device-3fe25bca01adbc6f7e37751c0cddf198.js": {
+      "digest": "3fe25bca01adbc6f7e37751c0cddf198",
+      "logical_path": "device.js",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 2143
+    },
+    "ember-validator-example-c71addd675b27d265604ba9a964ef264.css": {
+      "digest": "c71addd675b27d265604ba9a964ef264",
+      "logical_path": "ember-validator-example.css",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 2386
+    },
+    "ember-validator-example-ff83aad2d9bc1e276c9e140e240ad681.js": {
+      "digest": "ff83aad2d9bc1e276c9e140e240ad681",
+      "logical_path": "ember-validator-example.js",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 223830
+    },
+    "ember-validator-example-mobile-52d8f2bd0aa0f183e04980bbe9f20097.css": {
+      "digest": "52d8f2bd0aa0f183e04980bbe9f20097",
+      "logical_path": "ember-validator-example-mobile.css",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 2131
+    },
+    "ember-validator-example-mobile-bf38822fd1dcb98ecd9b7e4677828050.js": {
+      "digest": "bf38822fd1dcb98ecd9b7e4677828050",
+      "logical_path": "ember-validator-example-mobile.js",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 224587
+    },
+    "vendor-09c33e0dbe10929e85882e8bef2360e0.css": {
+      "digest": "09c33e0dbe10929e85882e8bef2360e0",
+      "logical_path": "vendor.css",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 2615
+    },
+    "vendor-1b047a542ae43903d6e6402d0dada1b6.js": {
+      "digest": "1b047a542ae43903d6e6402d0dada1b6",
+      "logical_path": "vendor.js",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 915298
+    },
+    "vendor-mobile-09c33e0dbe10929e85882e8bef2360e0.css": {
+      "digest": "09c33e0dbe10929e85882e8bef2360e0",
+      "logical_path": "vendor-mobile.css",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 2615
+    },
+    "vendor-mobile-1b047a542ae43903d6e6402d0dada1b6.js": {
+      "digest": "1b047a542ae43903d6e6402d0dada1b6",
+      "logical_path": "vendor-mobile.js",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 915298
+    },
+    "viewport-optimizations-ac257bcb47388dfb7311da31a3934b64.js": {
+      "digest": "ac257bcb47388dfb7311da31a3934b64",
+      "logical_path": "viewport-optimizations.js",
+      "mtime": "2015-12-17T02:34:47.000Z",
+      "size": 1272
+    }
+  }
+}
